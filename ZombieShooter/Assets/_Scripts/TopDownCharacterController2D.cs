@@ -12,6 +12,7 @@ public class Boundary
 public class TopDownCharacterController2D : MonoBehaviour {
 
     public float speed;
+    public float sprint;
     private Rigidbody2D rb2D;
     public Boundary boundary;
 
@@ -25,7 +26,15 @@ public class TopDownCharacterController2D : MonoBehaviour {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
-        rb2D.velocity = new Vector2(x, y) * speed;
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            rb2D.velocity = new Vector2(x, y) * sprint;
+        }
+        else
+        {
+            rb2D.velocity = new Vector2(x, y) * speed;
+        }
+
         rb2D.angularVelocity = 0.0f;
 
         rb2D.position = new Vector2
