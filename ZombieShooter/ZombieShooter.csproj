@@ -302,9 +302,11 @@
   <ItemGroup>
     <Compile Include="Assets\_Scripts\Bullet2D.cs" />
     <Compile Include="Assets\_Scripts\BulletHit2D.cs" />
+    <Compile Include="Assets\_Scripts\Explosion.cs" />
     <Compile Include="Assets\_Scripts\FixedFollow2D.cs" />
     <Compile Include="Assets\_Scripts\MouseSmoothLook2D.cs" />
     <Compile Include="Assets\_Scripts\MoveTowardsObject.cs" />
+    <Compile Include="Assets\_Scripts\PoolManager.cs" />
     <Compile Include="Assets\_Scripts\ShootBullet.cs" />
     <Compile Include="Assets\_Scripts\SmoothFollow2D.cs" />
     <Compile Include="Assets\_Scripts\SmoothLookAtTarget2D.cs" />
