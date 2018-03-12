@@ -15,6 +15,6 @@ public class BulletHit2D : MonoBehaviour {
             other.SendMessage("TakeDamage", damage);
         }
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

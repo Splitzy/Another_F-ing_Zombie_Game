@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShootBullet : MonoBehaviour {
 
-    public GameObject bulletPrefab;
     public Transform bulletSpawnRight;
     public Transform bulletSpawnLeft;
     public float fireTime;
@@ -19,11 +18,16 @@ public class ShootBullet : MonoBehaviour {
     void Fire()
     {
         isFiring = true;
-        Instantiate(bulletPrefab, bulletSpawnRight.position, bulletSpawnRight.rotation);
+        GameObject bullet = PoolManager.current.GetPooledObject("Bullet");
 
-        Instantiate(bulletPrefab, bulletSpawnLeft.position, bulletSpawnLeft.rotation);
+        if(bullet != null)
+        {
+            bullet.transform.position = bulletSpawnRight.position;
+            bullet.transform.rotation = bulletSpawnRight.rotation;
+            bullet.SetActive(true);
+        }
 
-        if(GetComponent<AudioSource>() != null)
+        if (GetComponent<AudioSource>() != null)
         {
             GetComponent<AudioSource>().Play();
         }
