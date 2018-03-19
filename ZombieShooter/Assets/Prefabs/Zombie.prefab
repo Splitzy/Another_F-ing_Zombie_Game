@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114181785597937212}
   - component: {fileID: 114301088735297156}
   - component: {fileID: 114589987413698408}
+  - component: {fileID: 114724224271159568}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Zombie
@@ -92,6 +93,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  damage: 2
+  explosionPrefab: {fileID: 1529476251240774, guid: 36ff15cd449bba14ba42538dce4589bd,
+    type: 2}
+  adjustExplosionAngle: 270
 --- !u!114 &114301088735297156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,6 +124,18 @@ MonoBehaviour:
   target: {fileID: 0}
   smoothing: 5
   adjustmentAngle: 270
+--- !u!114 &114724224271159568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1648710603940330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba94a673d337954597b4dc99476f8a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 10
 --- !u!212 &212140693104445792
 SpriteRenderer:
   m_ObjectHideFlags: 1
