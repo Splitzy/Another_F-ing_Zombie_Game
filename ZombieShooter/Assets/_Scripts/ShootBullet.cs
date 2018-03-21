@@ -14,7 +14,8 @@ public class ShootBullet : MonoBehaviour {
     {
         isFiring = false;
     }
-	
+
+
     void Fire()
     {
         isFiring = true;
@@ -37,7 +38,7 @@ public class ShootBullet : MonoBehaviour {
 
 	void Update ()
     {
-		if(Input.GetMouseButton(0))
+		if(Input.GetMouseButton(0) && !PauseMenu.isPaused)
         {
             if(!isFiring)
             {

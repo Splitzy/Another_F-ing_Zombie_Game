@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 152913648}
   - component: {fileID: 152913649}
   m_Layer: 0
-  m_Name: Spotlight
+  m_Name: Flashlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1227,12 +1227,12 @@ GameObject:
   - component: {fileID: 2048843824}
   - component: {fileID: 2048843823}
   - component: {fileID: 2048843822}
+  - component: {fileID: 2048843829}
   - component: {fileID: 2048843821}
   - component: {fileID: 2048843826}
   - component: {fileID: 2048843827}
-  - component: {fileID: 2048843828}
   - component: {fileID: 2048843830}
-  - component: {fileID: 2048843829}
+  - component: {fileID: 2048843828}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Player
