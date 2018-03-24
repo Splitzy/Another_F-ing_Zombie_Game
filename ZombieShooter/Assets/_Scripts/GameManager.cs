@@ -20,8 +20,9 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene("Main Menu");
     }
 
-    public void Continue()
+    public void QuitGame()
     {
-
+        Application.Quit();
+        Debug.Log("you have quit the game!");
     }
 }
