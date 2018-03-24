@@ -6,9 +6,14 @@ public class GameUI : MonoBehaviour {
 
     private int health;
     private int score;
-    private string gameInfo = "";
+    private int stamina;
+    //private string gameInfo = "";
 
-    private Rect boxRect = new Rect(10, 10, 300, 50);
+    public GameObject healthSlider;
+    public GameObject staminaSlider;
+    public GameObject scoreText;
+
+    //private Rect boxRect = new Rect(10, 10, 300, 50);
 
     private void OnEnable()
     {
@@ -41,11 +46,12 @@ public class GameUI : MonoBehaviour {
 	
 	void UpdateUI()
     {
-		gameInfo = "Score: " + score.ToString() + "\nHealth: " + health.ToString();
+		//gameInfo = "Score: " + score.ToString() + "\nHealth: " + health.ToString();
+        scoreText.GetComponent<UnityEngine.UI.Text>().text = score.ToString();
 	}
 
-    void OnGUI()
-    {
-        GUI.Box(boxRect, gameInfo);
-    }
+    //void OnGUI()
+    //{
+    //    GUI.Box(boxRect, gameInfo);
+    //}
 }
