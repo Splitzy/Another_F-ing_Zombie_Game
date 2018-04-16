@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShootBullet : MonoBehaviour {
 
     public Transform bulletSpawnRight;
-    public Transform bulletSpawnLeft;
+    //public Transform bulletSpawnLeft;
     public float fireTime;
 
     private bool isFiring = false;
@@ -25,6 +25,7 @@ public class ShootBullet : MonoBehaviour {
         {
             bullet.transform.position = bulletSpawnRight.position;
             bullet.transform.rotation = bulletSpawnRight.rotation;
+            
             bullet.SetActive(true);
         }
 

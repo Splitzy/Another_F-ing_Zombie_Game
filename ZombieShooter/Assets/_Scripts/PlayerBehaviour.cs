@@ -7,7 +7,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public delegate void UpdateHealth (int newHealth);
     public static event UpdateHealth OnUpdateHealth;
-    //public delegate void UpdateStamina (int newStamina);
+    //public delegate void UpdateStamina(int newStamina);
     //public static event UpdateStamina OnUpdateStamina;
 
     public int health = 100;
@@ -21,7 +21,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
         SendHealthData();
         //SendStaminaData();
-	}
+    }
 	
 
 	void Update ()

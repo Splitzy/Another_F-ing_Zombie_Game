@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour {
 
@@ -9,8 +10,8 @@ public class GameUI : MonoBehaviour {
     private int stamina;
     //private string gameInfo = "";
 
-    public GameObject healthSlider;
-    public GameObject staminaSlider;
+    public Slider healthSlider;
+    public Slider staminaSlider;
     public GameObject scoreText;
 
     //private Rect boxRect = new Rect(10, 10, 300, 50);
@@ -18,12 +19,14 @@ public class GameUI : MonoBehaviour {
     private void OnEnable()
     {
         PlayerBehaviour.OnUpdateHealth += HandleonUpdateHealth;
+        //PlayerBehaviour.OnUpdateStamina += HandleonUpdateStamina;
         AddScore.OnSendScore += HandleonSendScore;
     }
 
     private void OnDisable()
     {
         PlayerBehaviour.OnUpdateHealth -= HandleonUpdateHealth;
+        //PlayerBehaviour.OnUpdateStamina -= HandleonUpdateStamina;
         AddScore.OnSendScore -= HandleonSendScore;
     }
 
@@ -38,6 +41,12 @@ public class GameUI : MonoBehaviour {
         UpdateUI();
     }
 
+    //void HandleonUpdateStamina(int newStamina)
+    //{
+    //    stamina = newStamina;
+    //    UpdateUI();
+    //}
+
     void HandleonSendScore(int theScore)
     {
         score += theScore;
@@ -48,6 +57,8 @@ public class GameUI : MonoBehaviour {
     {
 		//gameInfo = "Score: " + score.ToString() + "\nHealth: " + health.ToString();
         scoreText.GetComponent<UnityEngine.UI.Text>().text = score.ToString();
+        healthSlider.value = health;
+        staminaSlider.value = stamina;
 	}
 
     //void OnGUI()
