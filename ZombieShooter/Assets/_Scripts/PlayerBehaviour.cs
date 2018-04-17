@@ -11,13 +11,15 @@ public class PlayerBehaviour : MonoBehaviour {
     //public static event UpdateStamina OnUpdateStamina;
 
     public int health = 100;
-    //public int stamina = 100;
+    //public int maxStamina = 100;
+    //private int stamina;
 
     private Animator gunAnim;
 	
 	void Start()
     {
         gunAnim = GetComponent<Animator>();
+        //stamina = maxStamina;
 
         SendHealthData();
         //SendStaminaData();
@@ -60,9 +62,9 @@ public class PlayerBehaviour : MonoBehaviour {
     //        {
     //            stamina += 2;
 
-    //            if (stamina >= 100)
+    //            if (stamina >= maxStamina)
     //            {
-    //                stamina = 100;
+    //                stamina = maxStamina;
     //            }
     //        }
     //    }

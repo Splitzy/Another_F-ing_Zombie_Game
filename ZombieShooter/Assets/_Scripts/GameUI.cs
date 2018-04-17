@@ -7,7 +7,7 @@ public class GameUI : MonoBehaviour {
 
     private int health;
     private int score;
-    private int stamina;
+    //private int stamina;
     //private string gameInfo = "";
 
     public Slider healthSlider;
@@ -58,7 +58,7 @@ public class GameUI : MonoBehaviour {
 		//gameInfo = "Score: " + score.ToString() + "\nHealth: " + health.ToString();
         scoreText.GetComponent<UnityEngine.UI.Text>().text = score.ToString();
         healthSlider.value = health;
-        staminaSlider.value = stamina;
+        //staminaSlider.value = stamina;
 	}
 
     //void OnGUI()

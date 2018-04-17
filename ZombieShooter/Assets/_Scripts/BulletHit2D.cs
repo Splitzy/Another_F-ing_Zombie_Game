@@ -10,7 +10,7 @@ public class BulletHit2D : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag(damageTag))
+        if (other.CompareTag(damageTag))
         {
             other.SendMessage("TakeDamage", damage);
         }
