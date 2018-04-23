@@ -13,6 +13,7 @@ public class ZombieBehaviour : MonoBehaviour {
 
     private void Start()
     {
+
         if(GameObject.FindWithTag("Player"))
         {
             player = GameObject.FindWithTag("Player").transform;
@@ -27,7 +28,15 @@ public class ZombieBehaviour : MonoBehaviour {
         if(other.gameObject.CompareTag("Player"))
         {
             other.gameObject.SendMessage("TakeDamage", damage);
+            GetComponent<Collider2D>().enabled = false;
+            Invoke("ResetDamage", 0.5f);
         }
+    }
+
+
+    void ResetDamage()
+    {
+        GetComponent<Collider2D>().enabled = true;
     }
 
     public void TakeDamage(int damage)
