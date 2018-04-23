@@ -7,22 +7,24 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public delegate void UpdateHealth (int newHealth);
     public static event UpdateHealth OnUpdateHealth;
-    //public delegate void UpdateStamina(int newStamina);
-    //public static event UpdateStamina OnUpdateStamina;
+    public delegate void UpdateStamina(float newStamina);
+    public static event UpdateStamina OnUpdateStamina;
 
     public int health = 100;
-    //public int maxStamina = 100;
-    //private int stamina;
+    public float maxStamina = 100;
+    private float stamina;
 
     private Animator gunAnim;
 	
 	void Start()
     {
         gunAnim = GetComponent<Animator>();
-        //stamina = maxStamina;
+        stamina = maxStamina;
 
         SendHealthData();
-        //SendStaminaData();
+        SendStaminaData();
+
+        InvokeRepeating("RefreshStamina", 0, 1);
     }
 	
 
@@ -38,6 +40,13 @@ public class PlayerBehaviour : MonoBehaviour {
         {
             gunAnim.SetBool("isFiring", false);
         }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Sprint();
+        }
+
+        
     }
 
     public void TakeDamage (int damage)
@@ -52,23 +61,27 @@ public class PlayerBehaviour : MonoBehaviour {
         }
     }
 
-    //public void Sprint()
-    //{
-    //    if (Input.GetKey(KeyCode.LeftShift))
-    //    {
-    //        stamina -= 2;
+    void RefreshStamina()
+    {
+        stamina += 5;
 
-    //        if (stamina <= 0)
-    //        {
-    //            stamina += 2;
+        if(stamina >= maxStamina)
+        {
+            stamina = maxStamina;
+        }
 
-    //            if (stamina >= maxStamina)
-    //            {
-    //                stamina = maxStamina;
-    //            }
-    //        }
-    //    }
-    //}
+        SendStaminaData();
+    }
+
+    public void Sprint()
+    {
+        if (stamina > 2)
+        {
+            stamina -= 0.5f;
+        }
+
+        SendStaminaData();
+    }
 
     void Die()
     {
@@ -83,11 +96,11 @@ public class PlayerBehaviour : MonoBehaviour {
         }
     }
 
-    //void SendStaminaData()
-    //{
-    //    if (OnUpdateStamina != null)
-    //    {
-    //        OnUpdateStamina(stamina);
-    //    }
-    //}
+    void SendStaminaData()
+    {
+        if (OnUpdateStamina != null)
+        {
+            OnUpdateStamina(stamina);
+        }
+    }
 }

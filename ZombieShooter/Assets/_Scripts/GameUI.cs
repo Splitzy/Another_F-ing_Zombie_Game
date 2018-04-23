@@ -7,7 +7,7 @@ public class GameUI : MonoBehaviour {
 
     private int health;
     private int score;
-    //private int stamina;
+    private float stamina;
     //private string gameInfo = "";
 
     public Slider healthSlider;
@@ -19,14 +19,14 @@ public class GameUI : MonoBehaviour {
     private void OnEnable()
     {
         PlayerBehaviour.OnUpdateHealth += HandleonUpdateHealth;
-        //PlayerBehaviour.OnUpdateStamina += HandleonUpdateStamina;
+        PlayerBehaviour.OnUpdateStamina += HandleonUpdateStamina;
         AddScore.OnSendScore += HandleonSendScore;
     }
 
     private void OnDisable()
     {
         PlayerBehaviour.OnUpdateHealth -= HandleonUpdateHealth;
-        //PlayerBehaviour.OnUpdateStamina -= HandleonUpdateStamina;
+        PlayerBehaviour.OnUpdateStamina -= HandleonUpdateStamina;
         AddScore.OnSendScore -= HandleonSendScore;
     }
 
@@ -41,11 +41,11 @@ public class GameUI : MonoBehaviour {
         UpdateUI();
     }
 
-    //void HandleonUpdateStamina(int newStamina)
-    //{
-    //    stamina = newStamina;
-    //    UpdateUI();
-    //}
+    void HandleonUpdateStamina(float newStamina)
+    {
+        stamina = newStamina;
+        UpdateUI();
+    }
 
     void HandleonSendScore(int theScore)
     {
@@ -58,7 +58,7 @@ public class GameUI : MonoBehaviour {
 		//gameInfo = "Score: " + score.ToString() + "\nHealth: " + health.ToString();
         scoreText.GetComponent<UnityEngine.UI.Text>().text = score.ToString();
         healthSlider.value = health;
-        //staminaSlider.value = stamina;
+        staminaSlider.value = stamina;
 	}
 
     //void OnGUI()
