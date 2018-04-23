@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/AstarPathfindingProject/ExampleScenes/Example15_2D/2D.unity
+- path: Assets/_Scenes/Zombie Shooter Level 1.unity
   isLoaded: 1
   isActive: 1

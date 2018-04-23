@@ -16,5 +16,4 @@ Assets used:
 
 - Rifle shot: https://freesound.org/people/SuperPhat/sounds/404561/
 
-
-
+- Forest Background: https://www.shutterstock.com/video/clip-12474842-stock-footage-top-down-drone-view-of-lush-forest.html
