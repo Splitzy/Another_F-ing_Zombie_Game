@@ -32,13 +32,13 @@ public class PlayerBehaviour : MonoBehaviour {
     {
 		if(Input.GetMouseButtonDown(0) && !PauseMenu.isPaused)
         {
-            GetComponent<AudioSource>().Play();
-            gunAnim.SetBool("isFiring", true);
+            //GetComponent<AudioSource>().Play();
+            //gunAnim.SetBool("isFiring", true);
         }
 
         if (Input.GetMouseButtonUp(0) && !PauseMenu.isPaused)
         {
-            gunAnim.SetBool("isFiring", false);
+            //gunAnim.SetBool("isFiring", false);
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
