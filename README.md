@@ -24,3 +24,6 @@ All music in this game comes from LSD - Jesus on E's
 https://www.youtube.com/watch?v=0MjNsNW8DvM
 
 - Forest Background: https://www.shutterstock.com/video/clip-12474842-stock-footage-top-down-drone-view-of-lush-forest.html
+
+- Crimes Times Six font was made by Tattowoo 
+- Copyright © 2012 TattooWoo.com. All Rights Reserved.
