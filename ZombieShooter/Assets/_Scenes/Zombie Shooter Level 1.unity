@@ -684,7 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c047c68643fbf64593e0f621a18908e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 1648710603940330, guid: 40f09770d52efb64f801e778499c228e,
+  objectPrefab: {fileID: 1061752877895442, guid: 7e5455640a37f0743aa309fecddf8095,
     type: 2}
 --- !u!4 &187468338
 Transform:
@@ -2181,9 +2181,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1531461338}
+  - component: {fileID: 1531461341}
   - component: {fileID: 1531461340}
   - component: {fileID: 1531461339}
-  - component: {fileID: 1531461341}
   - component: {fileID: 1531461343}
   m_Layer: 0
   m_Name: Dual Pistols

@@ -14,11 +14,11 @@ public class PlayerBehaviour : MonoBehaviour {
     public float maxStamina = 100;
     private float stamina;
 
-    private Animator gunAnim;
+    //private Animator gunAnim;
 	
 	void Start()
     {
-        gunAnim = GetComponent<Animator>();
+        //gunAnim = GetComponent<Animator>();
         stamina = maxStamina;
 
         SendHealthData();
