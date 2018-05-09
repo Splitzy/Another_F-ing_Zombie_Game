@@ -94,7 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   damage: 10
-  explosionPrefab: {fileID: 1529476251240774, guid: 36ff15cd449bba14ba42538dce4589bd,
+  explosionPrefab: {fileID: 1485073101091158, guid: 197a1ff9fd73be64491b2a798279e3cd,
     type: 2}
   adjustExplosionAngle: 270
 --- !u!114 &114251269487303174

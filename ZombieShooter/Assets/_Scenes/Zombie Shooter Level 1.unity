@@ -433,6 +433,7 @@ GameObject:
   - component: {fileID: 132070753}
   - component: {fileID: 132070752}
   - component: {fileID: 132070754}
+  - component: {fileID: 132070755}
   m_Layer: 0
   m_Name: Crossbow
   m_TagString: Untagged
@@ -592,6 +593,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &132070755
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 132070750}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa2471e8ca44b4d4fbd97c2720f317c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &152913647
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,13 +684,14 @@ GameObject:
   m_Component:
   - component: {fileID: 187468338}
   - component: {fileID: 187468337}
+  - component: {fileID: 187468339}
   m_Layer: 0
   m_Name: Ultra Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &187468337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,6 +718,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &187468339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 187468336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf1af6b22f95c84fb71e4583ecf04da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 60
+  pointScore: 500
+  gameUI: {fileID: 964709787}
 --- !u!1 &212622467
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +811,7 @@ GameObject:
   - component: {fileID: 250736059}
   - component: {fileID: 250736060}
   - component: {fileID: 250736061}
+  - component: {fileID: 250736062}
   m_Layer: 0
   m_Name: Rifle
   m_TagString: Untagged
@@ -937,6 +971,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &250736062
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 250736057}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f19d8f1e6bb6bd4ba507819bf0688e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &279452771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,7 +1116,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 402542811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.39, y: 0.9, z: 0}
+  m_LocalPosition: {x: 0.27, y: 0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 132070751}
@@ -1382,7 +1433,7 @@ GameObject:
   - component: {fileID: 744024880}
   - component: {fileID: 744024882}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: Zombie Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1426,6 +1477,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnTime: 5
+  pointScore: 0
+  gameUI: {fileID: 964709787}
 --- !u!1 &750042484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,7 +1676,7 @@ GameObject:
   - component: {fileID: 870273551}
   - component: {fileID: 870273550}
   m_Layer: 0
-  m_Name: Spawner (1)
+  m_Name: Runner Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1641,6 +1694,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnTime: 15
+  pointScore: 50
+  gameUI: {fileID: 964709787}
 --- !u!114 &870273551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1762,6 +1817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b367adbe29f8db243980aaa25ebe7e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   healthSlider: {fileID: 2548581}
   staminaSlider: {fileID: 750042486}
   scoreText: {fileID: 2084523491}
@@ -1878,7 +1934,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -2.385, y: 0}
+  m_AnchoredPosition: {x: -2.3849945, y: 0}
   m_SizeDelta: {x: 4.77, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1087186781
@@ -2185,6 +2241,7 @@ GameObject:
   - component: {fileID: 1531461340}
   - component: {fileID: 1531461339}
   - component: {fileID: 1531461343}
+  - component: {fileID: 1531461342}
   m_Layer: 0
   m_Name: Dual Pistols
   m_TagString: Untagged
@@ -2279,6 +2336,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &1531461342
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1531461337}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dfdd06d95ca82074686b19fa416df1f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!82 &1531461343
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2484,7 +2558,7 @@ GameObject:
   - component: {fileID: 1612484017}
   - component: {fileID: 1612484016}
   m_Layer: 0
-  m_Name: Spawner (2)
+  m_Name: Heavy Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2502,6 +2576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnTime: 20
+  pointScore: 200
+  gameUI: {fileID: 964709787}
 --- !u!114 &1612484017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3648,7 +3724,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1897303130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.248, y: 0.82, z: 0}
+  m_LocalPosition: {x: 0.43, y: 0.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 250736058}
@@ -4070,6 +4146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxStamina: 100
+  stamina: 0
 --- !u!114 &2048843831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4216,7 +4293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.125, y: 0.8145186}
   m_AnchorMax: {x: 0.238, y: 0.87051857}
-  m_AnchoredPosition: {x: -1.8333435, y: -5.8779144}
+  m_AnchoredPosition: {x: -1.833374, y: -5.8779297}
   m_SizeDelta: {x: 0.019989014, y: -0.43999863}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2084523493
@@ -4563,6 +4640,7 @@ GameObject:
   - component: {fileID: 2146768849}
   - component: {fileID: 2146768848}
   - component: {fileID: 2146768853}
+  - component: {fileID: 2146768854}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -4782,3 +4860,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &2146768854
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2146768845}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a233c6c814f821944892d89616f3d5ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
