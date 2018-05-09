@@ -32,7 +32,7 @@ public class GameUI : MonoBehaviour {
     void Start ()
     {
         UpdateUI();
-        highScore = PlayerPrefs.GetInt("highScore", highScore);
+        highScore = PlayerPrefs.GetInt("highScore", 0);
     }
 
     void HandleonUpdateHealth(int newHealth)
@@ -61,8 +61,8 @@ public class GameUI : MonoBehaviour {
 
         if (score > highScore)
         {
-            highScore = score;
-            PlayerPrefs.SetInt("highScore", highScore);
+            PlayerPrefs.SetInt("highScore", score);
+            PlayerPrefs.Save();
         }
 	}
 }

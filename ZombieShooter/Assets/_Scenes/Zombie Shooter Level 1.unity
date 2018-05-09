@@ -729,7 +729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf1af6b22f95c84fb71e4583ecf04da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 60
+  spawnTime: 45
   pointScore: 500
   gameUI: {fileID: 964709787}
 --- !u!1 &212622467
@@ -1818,6 +1818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  highScore: 0
   healthSlider: {fileID: 2548581}
   staminaSlider: {fileID: 750042486}
   scoreText: {fileID: 2084523491}

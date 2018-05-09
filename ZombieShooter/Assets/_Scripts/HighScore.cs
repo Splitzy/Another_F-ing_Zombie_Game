@@ -8,9 +8,9 @@ public class HighScore : MonoBehaviour {
     private int hScore;
     public GameObject highScoreText;
 
-	void Update ()
+	void Start()
     {
-        hScore = PlayerPrefs.GetInt("HighScore");
+        hScore = PlayerPrefs.GetInt("highScore", 0);
 
         highScoreText.GetComponent<UnityEngine.UI.Text>().text = hScore.ToString();
 	}
