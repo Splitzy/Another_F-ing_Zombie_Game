@@ -12,7 +12,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public int health = 100;
     public float maxStamina = 100;
-    private float stamina;
+    public float stamina;
 
     //private Animator gunAnim;
 	

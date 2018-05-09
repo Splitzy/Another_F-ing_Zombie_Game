@@ -6,15 +6,14 @@ using UnityEngine.UI;
 public class GameUI : MonoBehaviour {
 
     private int health;
-    private int score;
+    public int score;
     private float stamina;
-    //private string gameInfo = "";
+    public int highScore;
 
     public Slider healthSlider;
     public Slider staminaSlider;
     public GameObject scoreText;
 
-    //private Rect boxRect = new Rect(10, 10, 300, 50);
 
     private void OnEnable()
     {
@@ -32,8 +31,9 @@ public class GameUI : MonoBehaviour {
 
     void Start ()
     {
-        UpdateUI();	
-	}
+        UpdateUI();
+        highScore = PlayerPrefs.GetInt("highScore", highScore);
+    }
 
     void HandleonUpdateHealth(int newHealth)
     {
@@ -55,14 +55,14 @@ public class GameUI : MonoBehaviour {
 	
 	void UpdateUI()
     {
-		//gameInfo = "Score: " + score.ToString() + "\nHealth: " + health.ToString();
         scoreText.GetComponent<UnityEngine.UI.Text>().text = score.ToString();
         healthSlider.value = health;
         staminaSlider.value = stamina;
-	}
 
-    //void OnGUI()
-    //{
-    //    GUI.Box(boxRect, gameInfo);
-    //}
+        if (score > highScore)
+        {
+            highScore = score;
+            PlayerPrefs.SetInt("highScore", highScore);
+        }
+	}
 }

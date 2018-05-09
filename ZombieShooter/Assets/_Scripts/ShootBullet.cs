@@ -10,9 +10,14 @@ public class ShootBullet : MonoBehaviour {
     public string pooledObject;
     private bool isFiring = false;
 
+
+    
+
     void SetFiring()
     {
         isFiring = false;
+
+        GetComponent<Animator>().SetBool("Is Firing", false);
     }
 
 
@@ -33,6 +38,8 @@ public class ShootBullet : MonoBehaviour {
         {
             GetComponent<AudioSource>().Play();
         }
+
+        GetComponent<Animator>().SetBool("Is Firing", true);
 
         Invoke("SetFiring", fireTime);
     }

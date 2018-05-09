@@ -26,7 +26,7 @@ public class TopDownCharacterController2D : MonoBehaviour {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
-        if(Input.GetKey(KeyCode.LeftShift) )
+        if(Input.GetKey(KeyCode.LeftShift) && GetComponent<PlayerBehaviour>().stamina > 10 )
         {
             rb2D.velocity = new Vector2(x, y) * sprint;
         }
