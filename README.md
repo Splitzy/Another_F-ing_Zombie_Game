@@ -20,10 +20,13 @@ Assets used:
 
 - Shotgun shot: https://freesound.org/people/AbuNijmeh/sounds/318973/
 
-All music in this game comes from LSD - Jesus on E's
-https://www.youtube.com/watch?v=0MjNsNW8DvM
+- Main Menu Music: Haunted by CO.AG Music https://www.youtube.com/watch?v=T0WjL4phiuk
+
+- Game Music: He lies broken by your shame by CO.AG Music https://www.youtube.com/watch?v=p4ivNAHFDSU
+
+- Game Over Music: The Lost by CO.AG Music https://www.youtube.com/watch?v=vpowIDAOMhc
 
 - Forest Background: https://www.shutterstock.com/video/clip-12474842-stock-footage-top-down-drone-view-of-lush-forest.html
 
-- Crimes Times Six font was made by Tattowoo 
-- Copyright © 2012 TattooWoo.com. All Rights Reserved.
+- Crimes Times Six font was made by Tattowoo
+- Copyright ï¿½ 2012 TattooWoo.com. All Rights Reserved.

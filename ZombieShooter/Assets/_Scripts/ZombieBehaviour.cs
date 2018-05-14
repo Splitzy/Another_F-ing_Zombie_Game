@@ -13,13 +13,18 @@ public class ZombieBehaviour : MonoBehaviour {
 
     private void Start()
     {
-
+        
         if(GameObject.FindWithTag("Player"))
         {
             player = GameObject.FindWithTag("Player").transform;
 
             GetComponent<MoveTowardsObject>().target = player;
             GetComponent<SmoothLookAtTarget2D>().target = player;
+        }
+
+        if (GetComponent<AudioSource>() != null)
+        {
+            GetComponent<AudioSource>().Play();
         }
     }
 
