@@ -5,7 +5,6 @@ using UnityEngine;
 public class ShootBullet : MonoBehaviour {
 
     public Transform bulletSpawnRight;
-    //public Transform bulletSpawnLeft;
     public float fireTime;
     public string pooledObject;
     private bool isFiring = false;
