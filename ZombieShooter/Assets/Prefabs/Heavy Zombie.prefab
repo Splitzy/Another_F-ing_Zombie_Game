@@ -230,6 +230,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1485073101091158, guid: 197a1ff9fd73be64491b2a798279e3cd,
     type: 2}
   adjustExplosionAngle: 270
+  flashMaterial: {fileID: 2100000, guid: 124179a553836274c82b89ae83b8e582, type: 2}
 --- !u!114 &114251269487303174
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerBehaviour : MonoBehaviour {
 
@@ -14,11 +15,8 @@ public class PlayerBehaviour : MonoBehaviour {
     public float maxStamina = 100;
     public float stamina;
 
-    //private Animator gunAnim;
-	
-	void Start()
+    void Start()
     {
-        //gunAnim = GetComponent<Animator>();
         stamina = maxStamina;
 
         SendHealthData();
@@ -30,23 +28,10 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	void Update ()
     {
-		if(Input.GetMouseButtonDown(0) && !PauseMenu.isPaused)
-        {
-            //GetComponent<AudioSource>().Play();
-            //gunAnim.SetBool("isFiring", true);
-        }
-
-        if (Input.GetMouseButtonUp(0) && !PauseMenu.isPaused)
-        {
-            //gunAnim.SetBool("isFiring", false);
-        }
-
         if (Input.GetKey(KeyCode.LeftShift))
         {
             Sprint();
         }
-
-        
     }
 
     public void TakeDamage (int damage)

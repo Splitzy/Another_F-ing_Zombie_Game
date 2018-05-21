@@ -8,13 +8,19 @@ public class ZombieBehaviour : MonoBehaviour {
     public int damage = 2;
     public GameObject explosionPrefab;
     public float adjustExplosionAngle = 0.0f;
+    public Material flashMaterial;
+    Material original;
+    SpriteRenderer sprite;
 
     private Transform player;
 
     private void Start()
     {
-        
-        if(GameObject.FindWithTag("Player"))
+        sprite = GetComponent<SpriteRenderer>();
+
+        original = sprite.material;
+
+        if (GameObject.FindWithTag("Player"))
         {
             player = GameObject.FindWithTag("Player").transform;
 
@@ -48,7 +54,9 @@ public class ZombieBehaviour : MonoBehaviour {
     {
         health -= damage;
 
-        if(health <= 0)
+        DoDamageFlash();
+
+        if (health <= 0)
         {
             Quaternion newRot = Quaternion.Euler(transform.eulerAngles.x,
                                                  transform.eulerAngles.y,
@@ -59,8 +67,21 @@ public class ZombieBehaviour : MonoBehaviour {
             GetComponent<AddScore>().DoSendScore();
 
             Destroy(gameObject);
+            CancelInvoke("ResetDamageFlash");
         }
-    
+
+    }
+
+    public void DoDamageFlash()
+    {
+        sprite.material = flashMaterial;
+
+        Invoke("ResetDamageFlash", 0.05f);
+    }
+
+    void ResetDamageFlash()
+    {
+        sprite.material = original;
     }
 
     void FixedUpdate()

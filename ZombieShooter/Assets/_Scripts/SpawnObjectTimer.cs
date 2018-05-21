@@ -12,7 +12,6 @@ public class SpawnObjectTimer : MonoBehaviour {
     void Start()
     {
         InvokeRepeating("PointSpawn", 0, 30);
-        //PointSpawn();
     }
 	
 

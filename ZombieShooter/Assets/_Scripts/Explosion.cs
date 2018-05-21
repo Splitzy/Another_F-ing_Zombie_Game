@@ -11,7 +11,6 @@ public class Explosion : MonoBehaviour {
         Invoke("Die", destroyTime);
 	}
 	
-	// Update is called once per frame
 	void Die()
     {
         Destroy(gameObject);
