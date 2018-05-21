@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114077852680102510}
   - component: {fileID: 114799105222477114}
   - component: {fileID: 82083345478560886}
+  - component: {fileID: 61256195292276572}
   m_Layer: 0
   m_Name: Runner Zombie
   m_TagString: Zombie
@@ -41,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1831727882596308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.3988867, y: -2.909741, z: 0}
+  m_LocalPosition: {x: -7.2799935, y: -3.1127474, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,6 +83,31 @@ CircleCollider2D:
   m_Offset: {x: -0.004928112, y: -0.41346908}
   serializedVersion: 2
   m_Radius: 0.37142038
+--- !u!61 &61256195292276572
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1831727882596308}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.72892594, y: 0.122704506}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.5, y: 2}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.24226236, y: 1.5085392}
+  m_EdgeRadius: 0
 --- !u!82 &82083345478560886
 AudioSource:
   m_ObjectHideFlags: 1
