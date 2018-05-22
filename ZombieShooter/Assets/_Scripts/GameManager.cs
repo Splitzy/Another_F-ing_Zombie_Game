@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	public void StartGame()
+    public void StartGame()
     {
         SceneManager.LoadScene("Zombie Shooter Level 1");
+        Cursor.visible = false;
     }
 
     public void EndGame()

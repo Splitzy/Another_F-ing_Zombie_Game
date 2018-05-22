@@ -14,6 +14,7 @@ public class PlayerBehaviour : MonoBehaviour {
     public int health = 100;
     public float maxStamina = 100;
     public float stamina;
+    public bool isDamaged = false;
 
     void Start()
     {
@@ -36,6 +37,8 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public void TakeDamage (int damage)
     {
+        isDamaged = true;
+
         health -= damage;
 
         SendHealthData();
@@ -44,7 +47,16 @@ public class PlayerBehaviour : MonoBehaviour {
         {
             Die();
         }
+
+        Invoke("Reset", 0.1f);
     }
+
+    private void Reset()
+    {
+        isDamaged = false;
+    }
+
+
 
     void RefreshStamina()
     {
@@ -70,6 +82,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     void Die()
     {
+        Cursor.visible = true;
         SceneManager.LoadScene("Game Over");
     }
 
